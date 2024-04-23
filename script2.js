@@ -1,63 +1,152 @@
+let btn_volver = document.getElementById('botonPersonajes');
+let gestionPersonaje = document.getElementById('gestionPersonaje');
 const personajes = [
     {
         nombre: "Mario",
-        imagen: "images/mario.png",
-        ataques: ["Salto", "Lanzar fuego", "Correr rápido", "Usar martillo"]
+        imagen: "images/personajes/luigi.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     },
     {
         nombre: "Luigi",
-        imagen: "images/luigi.png",
-        ataques: ["Salto alto", "Lanzar hielo", "Correr velozmente", "Usar Poltergust"]
+        imagen: "images/personajes/luigi.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     },
     {
         nombre: "Mario",
-        imagen: "images/mario.png",
-        ataques: ["Salto", "Lanzar fuego", "Correr rápido", "Usar martillo"]
+        imagen: "images/personajes/luigi.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     },
     {
         nombre: "Luigi",
-        imagen: "images/luigi.png",
-        ataques: ["Salto alto", "Lanzar hielo", "Correr velozmente", "Usar Poltergust"]
+        imagen: "images/personajes/mario.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     },
     {
         nombre: "Mario",
-        imagen: "images/mario.png",
-        ataques: ["Salto", "Lanzar fuego", "Correr rápido", "Usar martillo"]
+        imagen: "images/personajes/mario.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     },
     {
         nombre: "Luigi",
-        imagen: "images/luigi.png",
-        ataques: ["Salto alto", "Lanzar hielo", "Correr velozmente", "Usar Poltergust"]
+        imagen: "images/personajes/mario.png",
+        ataques: [
+            {
+                nombre: "Salto",
+                Tipo: "Purple"
+            },
+            {
+                nombre: "Lanzar fuego",
+                Tipo: "Red"
+            },
+            {
+                nombre: "Correr rápido",
+                Tipo: "Brown"
+            },
+            {
+                nombre: "Usar martillo",
+                Tipo: "Blue"
+            }]
     }
 ];
 
 function mostrarPersonajes() {
-    const container = document.getElementById('container');
+    let numPersonajes = 6;
+    for (let i = 1; i <= numPersonajes; i++) {
+        let nombrePersonaje = document.querySelector('#personaje' +i+ ' h2');
+        let imagenPersonaje = document.querySelector('#personaje' +i+ ' img');
 
-    personajes.forEach(personaje => {
-        const divPersonaje = document.createElement('div');
-        divPersonaje.classList.add('personaje');
+        nombrePersonaje.textContent = personajes[i-1].nombre;
+        imagenPersonaje.src = personajes[i-1].imagen;
 
-        const img = document.createElement('img');
-        img.src = personaje.imagen;
-        img.alt = personaje.nombre;
-
-        const nombre = document.createElement('h3');
-        nombre.textContent = personaje.nombre;
-
-        const ataques = document.createElement('ul');
-        personaje.ataques.forEach(ataque => {
-            const li = document.createElement('li');
-            li.textContent = ataque;
-            ataques.appendChild(li);
+        let ataques = document.querySelectorAll('#personaje' + i + ' > div[class^="ataque"]');
+        personajes[i-1].ataques.forEach((ataque, index) => {
+            ataques[index].textContent = ataque.nombre;
+            ataques[index].style.backgroundColor = ataque.Tipo;
         });
-
-        divPersonaje.appendChild(img);
-        divPersonaje.appendChild(nombre);
-        divPersonaje.appendChild(ataques);
-
-        container.appendChild(divPersonaje);
-    });
+    }
 }
+btn_volver.addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
 
 document.addEventListener('DOMContentLoaded', mostrarPersonajes);
