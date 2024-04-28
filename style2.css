@@ -22,7 +22,7 @@
 
 }
 .imgPersonaje img{
-    width: 50%;
+    width: 100px;
 }
 .h2Personaje{
     display: flex;
