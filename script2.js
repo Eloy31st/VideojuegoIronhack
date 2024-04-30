@@ -6,127 +6,193 @@ function guardarEquipoEnSessionStorage() {
 const personajes = [
     {
         nombre: "Mario",
+        Tipo: "Red",
+        VidaMaxima: 100,
+        VidaActual: 100,
         imagen: "images/personajes/mario.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     },
     {
         nombre: "Luigi",
+        Tipo: "Blue",
+        VidaMaxima: 150,
+        VidaActual: 150,
         imagen: "images/personajes/luigi.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     },
     {
         nombre: "Fresa",
+        Tipo: "Purple",
+        VidaMaxima: 160,
+        VidaActual: 160,
         imagen: "images/personajes/mario.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     },
     {
         nombre: "Refresa",
+        Tipo: "Brown",
+        VidaMaxima: 170,
+        VidaActual: 170,
         imagen: "images/personajes/luigi.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     },
     {
         nombre: "Adios",
+        Tipo: "Red",
+        VidaMaxima: 180,
+        VidaActual: 180,
         imagen: "images/personajes/mario.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     },
     {
         nombre: "Mañana",
+        Tipo: "Purple",
+        VidaMaxima: 190,
+        VidaActual: 190,
         imagen: "images/personajes/luigi.png",
         ataques: [
             {
                 nombre: "Salto",
+                Ataque: 50,
+                Curacion: 0,
                 Tipo: "Purple"
             },
             {
                 nombre: "Lanzar fuego",
+                Ataque: 70,
+                Curacion: 0,
                 Tipo: "Red"
             },
             {
                 nombre: "Correr rápido",
+                Ataque: 0,
+                Curacion: 40,
                 Tipo: "Brown"
             },
             {
                 nombre: "Usar martillo",
+                Ataque: 30,
+                Curacion: 20,
                 Tipo: "Blue"
             }]
     }
