@@ -85,3 +85,22 @@
     grid-column: 2;
     grid-row: 4;
 }
+.tipo{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid #fff;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.ataque {
+    margin-bottom: 5px;
+}
+

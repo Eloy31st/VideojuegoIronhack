@@ -3,53 +3,149 @@ let personajeMaquina;
 let turnoJugador = true;
 const equipoRival = [
     {
-        nombre: "Mario2",
-        Tipo: "Red",
-        VidaMaxima: 120,
-        VidaActual: 120,
-        imagen: "images/personajes/mario.png",
+        nombre: "Pablo Motos",
+        Tipo: "Purple",
+        VidaMaxima: 300,
+        VidaActual: 300,
+        imagen: "images/personajes/PabloMotos.png",
         ataques: [
             {
-                nombre: "Salto",
-                Ataque: 10,
+                nombre: "Trancas y Barrancas",
+                Ataque: 130,
                 Curacion: 0,
-                Tipo: "Purple"
-            },
-
-        ]
-    },
-    { nombre: "Mario",
-        Tipo: "Red",
-        VidaMaxima: 120,
-        VidaActual: 120,
-        imagen: "images/personajes/luigi.png",
-        ataques: [
-            {
-                nombre: "Salto",
-                Ataque: 100,
-                Curacion: 0,
-                Tipo: "Purple"
+                Tipo: "Purple",
+                Descripcion: "Pablo Motos llama a Trancas y Barrancas para que hagan daño a sus enemigos, infligiendo 130 de daño."
             },
             {
-                nombre: "Lanzar fuego",
-                Ataque: 100,
-                Curacion: 0,
-                Tipo: "Red"
+                nombre: "Chiste Malo",
+                Ataque: 80,
+                Curacion: 30,
+                Tipo: "Purple",
+                Descripcion: "Pablo Motos cuenta un chiste malo, infligiendo 80 de daño y recuperando 30 de salud."
             },
             {
-                nombre: "Correr rápido",
-                Ataque: 100,
+                nombre: "Modo Tikoker",
+                Ataque: 70,
                 Curacion: 40,
-                Tipo: "Brown"
+                Tipo: "Black",
+                Descripcion: "Pablo Motos se convierte en un Tikoker, infligiendo 70 de daño y recuperando 40 de salud."
             },
             {
-                nombre: "Usar martillo",
-                Ataque: 100,
-                Curacion: 20,
-                Tipo: "Blue"
+                nombre: "Yoga",
+                Ataque: 20,
+                Curacion: 110,
+                Tipo: "Purple",
+                Descripcion: "Pablo Motos hace yoga, infligiendo 20 de daño y recuperando 110 de salud."
             }
         ]
     },
+    { nombre: "Ibai",
+        Tipo: "Blue",
+        VidaMaxima: 350,
+        VidaActual: 350,
+        imagen: "images/personajes/Ibai.png",
+        ataques: [
+            {
+                nombre: "Se tu propio jefe",
+                Ataque: 20,
+                Curacion: 80,
+                Tipo: "Blue",
+                Descripcion: "Ibai se motiva a sí mismo, infligiendo 20 de daño y recuperando 140 de salud."
+            },
+            {
+                nombre: "Ibai Hazlo",
+                Ataque: 60,
+                Curacion: 60,
+                Tipo: "Blue",
+                Descripcion: "Ibai grita 'Ibai hazlo' y se cura a sí mismo en 80 puntos de vida y hace 80 de daño a sus enemigos."
+            },
+            {
+                nombre: "Risa de tetera",
+                Ataque: 0,
+                Curacion: 120,
+                Tipo: "Blue",
+                Descripcion: "Ibai se ríe como una tetera, recuperando 120 de salud."
+            },
+            {
+                nombre: "Kings League",
+                Ataque: 90,
+                Curacion: 0,
+                Tipo: "Blue",
+                Descripcion: "Ibai funda la Kings League, infligiendo 100 de daño."
+            }
+        ]
+    },
+    { nombre: "Espartero",
+    Tipo: "Red",
+    VidaMaxima: 270,
+    VidaActual: 270,
+    imagen: "images/personajes/Espartero.png",
+    ataques: [
+    {
+        nombre: "Embiste Heroico",
+        Ataque: 80,
+        Curacion: 0,
+        Tipo: "Red",
+        Descripcion: "Espartero carga contra el enemigo con fuerza heroica, infligiendo 80 de daño."
+    },
+    {
+        nombre: "Bombardeo a Barcelona",
+        Ataque: 180,
+        Curacion: -80,
+        Tipo: "Red",
+        Descripcion: "Espartero bombardea al enemigo con una lluvia de bombas, infligiendo 180 de daño al enemigo y 80 a sí mismo."
+    },
+    {
+        nombre: "Llama Ardiente",
+        Ataque: 70,
+        Curacion: 20,
+        Tipo: "Red",
+        Descripcion: "Espartero lanza una llama ardiente al enemigo, infligiendo 70 de daño y recuperando 20 de salud."
+    },
+    {
+        nombre: "Exilio",
+        Ataque: 0,
+        Curacion: 80,
+        Tipo: "Blue",
+        Descripcion: "Espartero se exilia a sí mismo, recuperando 80 de salud."
+    }]
+    },
+    {
+        nombre: "Franco",
+        Tipo: "Blue",
+        VidaMaxima: 300,
+        VidaActual: 300,
+        imagen: "images/personajes/Franco.png",
+        ataques: [
+            {
+                nombre: "Dictadura",
+                Ataque: 120,
+                Curacion: 0,
+                Tipo: "Blue",
+                Descripcion: "Franco impone su dictadura, infligiendo 120 de daño."
+            },
+            {
+                nombre: "Represión",
+                Ataque: 90,
+                Curacion: 0,
+                Tipo: "Green",
+                Descripcion: "Franco reprime a sus enemigos, infligiendo 90 de daño."
+            },
+            {
+                nombre: "Censura",
+                Ataque: 80,
+                Curacion: 40,
+                Tipo: "Yellow",
+                Descripcion: "Franco censura a sus enemigos, infligiendo 80 de daño y recuperando 40 de salud."
+            },
+            {
+                nombre: "Nacionalismo",
+                Ataque: 50,
+                Curacion: 70,
+                Tipo: "Red",
+                Descripcion: "Franco utiliza el nacionalismo para aumentar su fuerza, inflingiendo 50 de daño y recuperando 70 de salud."
+            }]
+    }
 ];
 
 function initScript3() {
@@ -119,23 +215,44 @@ async function atacar(ataque, atacante, objetivo) {
     setTimeout(async () => {
         switch (ataque.Tipo) {
             case "Red":
-                if (objetivo.Tipo === "Purple") {
+                if (objetivo.Tipo === "Green") {
                     daño *= 2;
                 } else if (objetivo.Tipo === "Blue") {
                     daño /= 2;
                 }
                 break;
-            case "Purple":
-                if (objetivo.Tipo === "Blue") {
+            case "Green":
+                if (objetivo.Tipo === "Purple") {
                     daño *= 2;
                 } else if (objetivo.Tipo === "Red") {
+                    daño /= 2;
+                }
+                break;
+            case "Purple":
+                if (objetivo.Tipo === "Black") {
+                    daño *= 2;
+                } else if (objetivo.Tipo === "Green") {
+                    daño /= 2;
+                }
+                break;
+            case "Black":
+                if (objetivo.Tipo === "Yellow") {
+                    daño *= 2;
+                } else if (objetivo.Tipo === "Purple") {
+                    daño /= 2;
+                }
+                break;
+            case "Yellow":
+                if (objetivo.Tipo === "Blue") {
+                    daño *= 2;
+                } else if (objetivo.Tipo === "Black") {
                     daño /= 2;
                 }
                 break;
             case "Blue":
                 if (objetivo.Tipo === "Red") {
                     daño *= 2;
-                } else if (objetivo.Tipo === "Purple") {
+                } else if (objetivo.Tipo === "Yellow") {
                     daño /= 2;
                 }
                 break;
@@ -282,6 +399,8 @@ function mostrarInfoAtaques() {
         const ataque = personajeJugador.ataques[index];
         btn.textContent = `${ataque.nombre}`;
         btn.style.backgroundColor = ataque.Tipo;
+
+        btn.title = ataque.Descripcion || "Descripción no disponible";
     });
 }
 
