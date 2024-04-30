@@ -27,7 +27,7 @@ const equipoRival = [
                 nombre: "Modo Tikoker",
                 Ataque: 70,
                 Curacion: 40,
-                Tipo: "Black",
+                Tipo: "Lightgrey",
                 Descripcion: "Pablo Motos se convierte en un Tikoker, infligiendo 70 de daño y recuperando 40 de salud."
             },
             {
@@ -229,13 +229,13 @@ async function atacar(ataque, atacante, objetivo) {
                 }
                 break;
             case "Purple":
-                if (objetivo.Tipo === "Black") {
+                if (objetivo.Tipo === "Lightgrey") {
                     daño *= 2;
                 } else if (objetivo.Tipo === "Green") {
                     daño /= 2;
                 }
                 break;
-            case "Black":
+            case "Lightgrey":
                 if (objetivo.Tipo === "Yellow") {
                     daño *= 2;
                 } else if (objetivo.Tipo === "Purple") {
@@ -245,7 +245,7 @@ async function atacar(ataque, atacante, objetivo) {
             case "Yellow":
                 if (objetivo.Tipo === "Blue") {
                     daño *= 2;
-                } else if (objetivo.Tipo === "Black") {
+                } else if (objetivo.Tipo === "Lightgrey") {
                     daño /= 2;
                 }
                 break;

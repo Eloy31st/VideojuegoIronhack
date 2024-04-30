@@ -115,7 +115,7 @@ const personajes = [
     },
     {
         nombre: "Pedro Sánchez",
-        Tipo: "Black",
+        Tipo: "Lightgrey",
         VidaMaxima: 370,
         VidaActual: 370,
         imagen: "images/personajes/PedroSanchez.png",
@@ -124,21 +124,21 @@ const personajes = [
                 nombre: "Dimisión",
                 Ataque: 0,
                 Curacion: 0,
-                Tipo: "Black",
+                Tipo: "Lightgrey",
                 Descripcion: "Que pringado, ni de coña Pedro Sanchez va a dimitir."
             },
             {
                 nombre: "Promesa Electoral",
                 Ataque: 60,
                 Curacion: 40,
-                Tipo: "Black",
+                Tipo: "Lightgrey",
                 Descripcion: "Pedro Sánchez realiza una promesa electoral que le permite recuperar 40 de salud y aumentar su fuerza para inflingir 60 de daño."
             },
             {
                 nombre: "Subida de Impuestos",
                 Ataque: 90,
                 Curacion: 0,
-                Tipo: "Black",
+                Tipo: "Lightgrey",
                 Descripcion: "Pedro Sánchez implementa una subida de impuestos que debilita a sus enemigos, infligiendo 90 de daño."
             },
             {
@@ -200,7 +200,7 @@ const personajes = [
                 Descripcion: "Rajoy se escuda en los vecinos, infligiendo 120 de daño."
             },
             {
-                nombre: "Españoles muy españoles y mucho españoles",
+                nombre: "Españoles muy españoles",
                 Ataque: 60,
                 Curacion: 40,
                 Tipo: "Purple",
